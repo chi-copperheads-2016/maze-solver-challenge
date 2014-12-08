@@ -21,7 +21,7 @@ o#........
  * `o` is your start point
  * `*` is your goal
 
-You will need to read in the Maze file and model it in your program. The maze can be any dimension and in any configuration, but it will always have four sides, and corridors will always be 1 block wide (as shown above).
+You will need to read in the Maze file and model it in your program. The maze can be any dimension and in any configuration, but it will always have four sides, and corridors will always be 1 block wide (as shown above). The maze does not "wrap", this ain't Pac-Man.
 
 There's a saying, "90% of programming is choosing the right data structures." Pick something simple and flexible to start. You may refactor it as you develop your solver algorithm.
 
