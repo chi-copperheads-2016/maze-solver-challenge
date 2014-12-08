@@ -2,6 +2,8 @@
 
 In this challenge you will use your knowledge of data structures and algorithms to build a maze solver.
 
+*Note: In this challenge you are not required to implement your own data structures.*
+
 ## Release 1, Reading the Maze
 
 Your maze will be defined in a text file that looks like this:
@@ -67,10 +69,16 @@ And the other should look like this:
 
 Release 3 should have made it easy to swap in approaches. In fact, you may have inadvertently implemented some form of the [strategy pattern](http://en.wikipedia.org/wiki/Strategy_pattern).
 
-## Release 5, Inefficient Searches
+## Release 5, On the Shoulders of Giants
 
-Construct a map that triggers an exceptionally inefficient search with each algorithm. In other words, you should be able to see that your code (with either algorithm) is not searching at all optimally.
+The two strategies above are essentially the same, save for the data structure they use to keep track of unexplored tiles.
 
-Why is this? What is your algorithm doing inefficiently? Don't refactor now, but brainstorm and describe some ideas (no matter how theoretical) that might speed things up.
+The first strategy is known as a [depth-first search](http://en.wikipedia.org/wiki/Depth-first_search). It uses a **Stack**.
 
-Commit your thoughts in a file called `notes.md`. We'll look at some different approaches in the next challenge.
+The second strategy is known as a [breadth-first-search](http://en.wikipedia.org/wiki/Breadth-first_search). It uses a **Queue**.
+
+DFS and BFS are classic algorithms in computer-science. Specifically, they're graph-search algorithms, and that's no accident. Your maze is just an [undirected graph](http://en.wikipedia.org/wiki/Graph_theory) of tiles. Each tile in the map is a _node_, with _edges_ pointing to neighboring cells.
+
+In all likelihood, you derived something that looks close to DFS and BFS yourself. This demonstrates the power of having strong computer science fundamentals. While the problems we solve vary on the surface, many problems are just instances of a generalizable problem with known  solutions. DFS was invented in the 19th century, BFS in the 1950s. Those who cannot learn from history are doomed to reimplement it.
+
+If you aren't already using stacks and queues in your strategies, refactor your code now. Both should use an iterative, not recursive, approach. In the truth, the code will be identical save the data structure but keep them separate for now instead of trying to DRY it up.
