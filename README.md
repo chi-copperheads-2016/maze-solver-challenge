@@ -65,7 +65,7 @@ And the other should look like this:
 
 ![](assets/bfs.gif)
 
-**Note**: The two approaches above are identical except for the data structure they use under the hood.
+The two approaches above are identical except for the data structure they use under the hood. When a branch is encountered, one seems to follow a path entirely before trying something else. The other explores all paths, one cell at a time.
 
 Release 3 should have made it easy to swap in approaches. In fact, you may have inadvertently implemented some form of the [strategy pattern](http://en.wikipedia.org/wiki/Strategy_pattern).
 
